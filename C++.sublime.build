@@ -1,0 +1,14 @@
+ {
+  "cmd": ["g++", "$file", "-o", "sum.cc"],
+  "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+  "working_dir": "/home/tq/Documents/C++",
+  "selector": "source.c, source.c++, source.cxx, source.cpp",
+  "variants":
+  [
+      {
+          "name": "Run",
+          "shell": true,
+          "cmd": ["gnome-terminal -e 'bash -c \"${file_path}/${file_base_name};echo;echo;  echo Press ENTER to continue; read line;exit; exec bash\"'"]
+      }
+  ]
+}
