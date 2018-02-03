@@ -2,28 +2,17 @@
 #include <iostream>
 #include <cmath>
 #include <cassert>
+#include <string>
 
 const double pi = 3.1415926;
-
-int main(){
-	vector2D a(3,4);
-	vector2D b(3,4);
-	vector2D c = 2 * a + b;
-	vector2D::createUnitVector(90*pi/180.0);
-	double res = a.crossProd(b);
-	// a.normalize();
-	// std::cout <<  "The test result is " << res << std::endl;
-	c.debugString();
-	std::cout << (a == b) << std::endl;
-	return 0;
-}
 
 vector2D vector2D::createUnitVector(const double angle){
 	return vector2D(sin(angle), cos(angle));
 }
 
-void vector2D::debugString() const{
-	std::cout << "vec2d ( x = " << x_ << ", y = " << y_ << " )" << std::endl;
+std::string vector2D::debugString() const{
+	return "vec2d ( x = " + std::to_string(x_) 
+			   + ", y = " + std::to_string(y_) + " )";
 }
 
 void vector2D::normalize(){

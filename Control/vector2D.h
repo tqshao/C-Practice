@@ -1,4 +1,8 @@
+#ifndef _VECTOR2D_H
+#define _VECTOR2D_H
+
 #include <cmath>
+#include <string>
 
 constexpr double kMathEpsilon = 1e-10;
 
@@ -20,10 +24,10 @@ public:
 	double y() const { return y_; }
 
 	// Sets x coordinate
-	double setX(const double x) { x_ = x; }
+	void setX(const double x) { x_ = x; }
 
 	// Sets y coordinate
-	double setY(const double y) { y_ = y; }
+	void setY(const double y) { y_ = y; }
 
 	// Returns the length of the vector
 	double length() const { return std::hypot(x_,y_); }
@@ -38,7 +42,7 @@ public:
 	void normalize();
 
 	// Output the vector information
-	void debugString() const;
+	std::string debugString() const;
 
 	// Returns the distance to a given vector
 	double distanceTo(const vector2D& other) const;
@@ -89,3 +93,5 @@ protected:
 
 // Multiplies the given vector2D by a given scalar
 vector2D operator*(const double ratio, const vector2D& vec);
+
+#endif
