@@ -1,6 +1,11 @@
+/*
+for test confilct issues
+*/
 #include <iostream>
 #include <cstring>
 using namespace std;
+
+
 
 class MyString{
 public:
