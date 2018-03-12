@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bitset>
+#include <utility>
 #include <vector>
 using namespace std;
 
@@ -15,6 +16,7 @@ private:
 };
 
 int main(){
+	/*
 	point p1;
 	point p2(2,2);
 	int a = 2;
@@ -23,6 +25,13 @@ int main(){
 	 cout << p1.getX() << endl;
 	// cout << binary <<endl;
 	// cout << p.getX() << endl;
+	*/
+	typedef vector< pair<double,double> > DataType;
+
+	DataType xy;
+	xy.push_back(make_pair(1.0, 2.0));
+	auto data(xy);
+
 	return 0;
 }
 

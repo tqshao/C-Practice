@@ -25,6 +25,8 @@ int Min(vector<int> a){
 	return a[begin] < a[end] ? a[begin] : a[end];
 } 
 
+
+
 int main(){
 	vector<int> a = {1,1,0,1,1,1};
 	cout << Min(a) << endl;
