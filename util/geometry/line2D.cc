@@ -14,11 +14,9 @@ line2D::line2D(const vector2D& start, const vector2D& end)
 		heading_ = unit_direction_.angle();
 	}
 
-
 std::string line2D::debugString() const{
 	const vector2D startS = this -> start();
 	std::string s = "line2D ( start = " + startS.debugString()
 				           + ", end = " + end_.debugString() + " )";
 	return s;
 }
-

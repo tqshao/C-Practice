@@ -1,4 +1,5 @@
 /hw
 /Practice/test
-/test/test2
+/test/test*
 /src/test*
+/test/cruise/test
