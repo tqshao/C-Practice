@@ -1,6 +1,7 @@
 // Put all even numbers before odd numbers in the array
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -18,10 +19,24 @@ void sort(vector<int> &vec){
   }
 }
 
+void sort_2(vector<int> &vec){
+  int start = 0;
+  int end = vec.size() - 1;
+  while(start < end){
+    if(vec[start]%2 == 1){
+      int tmp = vec[start];
+      vec[start] = vec[end];
+      vec[end] = tmp;
+      end--;
+    }
+    else start++;
+  }
+}
+
 
 int main(){
   vector<int> vec = {1,2,3,4,8,12,7,5,9,35,88,6};
-  sort(vec);
+  sort_2(vec);
   for(int i = 0; i < vec.size(); i++){
     cout << vec[i] << " ";
   }

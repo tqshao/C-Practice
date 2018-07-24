@@ -12,8 +12,8 @@ int choose(vector<int> time_left, vector<int> oil, int car, int& min_time){
 			min_time = time_left[i];
 			res = i;
 		}
+		return res;
 	}
-	return res;
 }
 
 void update(int car, int min_time, int& oil_A, int& time_A, int& time_B, int& time_C){
@@ -39,7 +39,7 @@ int main(){
 		int	min_time = INT_MAX;
 		station = choose(time_left, oil, car, min_time);
 		switch(station){
-			case -1: 
+			case -1:
 				cout << "Stuck!" << endl;
 				return 0;
 			case 0:
@@ -58,6 +58,6 @@ int main(){
 		wait += min_time;
 	}
 	cout << wait << endl;
-	return 0; 
+	return 0;
 
 }
